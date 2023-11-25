@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-
+import time
 chrome_driver_path = "C:/Users/sivateja/PycharmProjects/pythonProject/Driver/chromedriver.exe"
 ser_obj = Service(chrome_driver_path)
 
@@ -13,3 +13,4 @@ search_box = driver.find_element(By.NAME,'q')  # The name of the search input fi
 search_box.send_keys("Selenium WebDriver" + Keys.RETURN)
 
 driver.maximize_window()
+time.sleep(10)
